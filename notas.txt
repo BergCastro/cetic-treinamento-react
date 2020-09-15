@@ -1,0 +1,29 @@
+/*
+Criação de um projeto
+*/
+$ npx create-react-app nome_do_projeto
+...
+Success! Created teste at /home/moacir/workspace/oficina_de_codigo/react/cetic-treinamento-react/teste
+Inside that directory, you can run several commands:
+
+  yarn start
+    Starts the development server.
+
+  yarn build
+    Bundles the app into static files for production.
+
+  yarn test
+    Starts the test runner.
+
+  yarn eject // mostra tudo que está por baixo dos panos (não tem volta)
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd teste
+  yarn start
+
+
+es5 = 2013 - 2015
+es6 = 2015 - atual (alguns navegadores não rodam, mas o typescript converte pra es5)
