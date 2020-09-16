@@ -10,3 +10,10 @@ let nomePolicial = "Praça";
 nomePolicial = "Na Praça";
 
 console.log(nomePolicial);
+
+function teste() {
+  let nome = "jordao";
+}
+
+console.log(nome);
+teste();
