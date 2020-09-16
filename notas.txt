@@ -27,3 +27,8 @@ We suggest that you begin by typing:
 
 es5 = 2013 - 2015
 es6 = 2015 - atual (alguns navegadores não rodam, mas o typescript converte pra es5)
+
+$ git stash = coloca todas as alterações no lixo (pode ser recuperado depois)
+$ git checkout -b outro_branch
+$ git checkout outro_branch
+$ git stash apply
