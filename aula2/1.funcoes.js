@@ -1,7 +1,7 @@
 // Declaração de função (Function hoisting)
 falaOi();
 function falaOi() {
-  console.log("Oie");
+  return "oi";
 }
 
 // First-class objects (Objetos de primeira classe)
@@ -13,8 +13,10 @@ souUmDado();
 
 // Arrow function
 const funcaoArrow = () => {
-  console.log("Sou uma arrow function");
+  const igual = 1 === "1";
+  return igual;
 };
+
 funcaoArrow();
 
 // Dentro de um objeto

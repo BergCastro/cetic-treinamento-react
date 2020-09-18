@@ -1,4 +1,3 @@
-const conta = (...args) => {
+const conta = (conta, agencia, ...args) => {
   console.log(args);
 };
-conta("+", 1, 20, 30, 40, 50);
