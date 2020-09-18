@@ -20,13 +20,12 @@ const acumulador = numeros.reduce((n1, n2) => {
 })
 console.log('Acumulador: ', acumulador)
 
-
 // 2 - fazer de forma encadeada
 const resposta = numeros.filter(element => {
-    return element%2 === 0
+        return element%2 === 0
     }).map(element => {
         return element*2
     }).reduce((n1, n2) => {
         return n1+n2
-    })
+})
 console.log('Encadeado: ', resposta)
