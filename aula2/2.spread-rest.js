@@ -1,11 +1,19 @@
 // ... rest, ... spread
 //                    0          1          2
 //                 0  1  2    0  1  2    0  1  2
-const numeros = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+const numeros = [1, 2, 3, 4, 5];
+const letras = ["a", "b", "c"];
+
+// const numeros = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+const novoArray = [...numeros, ...letras];
+
+console.log(novoArray);
+
 const [lista1, lista2, lista3] = numeros;
 console.log(lista3[2]);
 
@@ -20,5 +28,6 @@ const pessoa = {
 };
 
 // Atribuição via desestruturação
-const { nome, sobrenome, ...resto } = pessoa;
-console.log(nome, resto);
+const { nome, ...rest } = pessoa;
+
+console.log(rest);
