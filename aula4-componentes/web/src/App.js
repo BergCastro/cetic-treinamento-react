@@ -1,70 +1,23 @@
 import React from "react";
+import Header from "./components/Header";
+import PostCard from "./components/PostCard";
 
 function App() {
   return (
     <div>
-      <nav>
-        <div>
-          <a href="#">Blog Cetic</a>
-          <div>
-            <a href="#">Home</a>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <div>
         <div>
           <div>
             <h1>Posts</h1>
             <hr />
-            <div>
-              <h2>PWA: O que é? Vale a pena? Quando utilizar?</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
-            <div>
-              <h2>5 ferramentas em alta para desenvolvedores React</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
-            <div>
-              <h2>Iniciando com ReactJS: Navegação e Autenticação com JWT</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
-            <div>
-              <h2>Server-side rendering (SSR) com ReactJS e Next.js</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
-            <div>
-              <h2>Ambiente Javascript: Dicas, VSCode e terminal</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
-            <div>
-              <h2>Context API do React 16.3.0 e métodos de ciclo de vida</h2>
-              <div>
-                <span>Por: Lindemberg</span>
-                <span>Postado em: 21 de setembro de 2020</span>
-              </div>
-            </div>
-
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
             <hr />
           </div>
 
