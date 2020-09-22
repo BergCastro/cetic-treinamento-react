@@ -29,3 +29,4 @@ const resposta = numeros.filter(element => {
         return n1+n2
 })
 console.log('Encadeado: ', resposta)
+

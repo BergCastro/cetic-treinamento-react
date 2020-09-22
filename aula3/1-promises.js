@@ -18,24 +18,24 @@ function esperaAi(msg, tempo) {
   });
 }
 
-// esperaAi(3, rand(1, 4))
+// esperaAi('executou', rand(1, 4))
 //   .then((valor) => console.log(valor))
 //   .catch((e) => console.log("erro", e));
 
 const promises = [
-  esperaAi("Promise 1", rand(1, 5)),
-  esperaAi("Promise 2", rand(1, 5)),
-  esperaAi("Promise 3", rand(1, 5)),
+  esperaAi("Promise 1", 5000),
+  esperaAi("Promise 2", 3000),
+  esperaAi("Promise 3", 4000),
 ];
 
 // Promise.all(promises)
 //   .then((valor) => {
 //     console.log(valor);
 //   })
-//   .catch();
+//   .catch((e) => console.error(e));
 
-Promise.race(promises)
-  .then((valor) => {
-    console.log(valor);
-  })
-  .catch();
+// Promise.race(promises)
+//   .then((valor) => {
+//     console.log(valor);
+//   })
+//   .catch();
