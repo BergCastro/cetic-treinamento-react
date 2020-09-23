@@ -113,3 +113,16 @@ function App() {
 }
 
 export default App;
+
+
+
+
+<h5>Pesquisar</h5>
+<div>
+<div>
+  <input type="text" placeholder="Search for..." />
+  <span>
+    <button type="button">Ir!</button>
+  </span>
+</div>
+</div>
