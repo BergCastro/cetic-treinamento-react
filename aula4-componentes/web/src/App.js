@@ -1,16 +1,10 @@
 import React from "react";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <nav>
-        <div>
-          <a href="#">Blog Cetic</a>
-          <div>
-            <a href="#">Home</a>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <div>
         <div>
@@ -104,8 +98,8 @@ function App() {
                 </div>
               </div>
             </div>
-            <button>+</button>
           </div>
+          <button>+</button>
         </div>
       </div>
     </div>
