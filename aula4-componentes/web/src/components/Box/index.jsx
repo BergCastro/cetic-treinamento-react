@@ -1,17 +1,11 @@
 import React from 'react';
 
-function Box(props) {
+function Box({ title, children }) {
   return (
-    <div>
-      <table>
-        <tr>
-          <td>{props.titulo}</td>
-        </tr>
-        <tr>
-          <td>{props.conteudo}</td>
-        </tr>
-      </table>
-    </div>
+    <>
+      <div>{title}</div>
+      <div>{children}</div>
+    </>
   );
 }
 
