@@ -1,20 +1,13 @@
 import React from "react";
 
-import "./styles.css";
-
-// const styles = {
-//   container: {
-//     background: "#ddd",
-//   },
-// };
+import { Container, Content, Title } from "./styles";
 
 const Box = ({ title, children }) => {
   return (
-    <div className="box__container">
-      <h5 className="box__title">{title}</h5>
-
-      <div className="box__content">{children}</div>
-    </div>
+    <Container>
+      <Title>{title}</Title>
+      <Content>{children}</Content>
+    </Container>
   );
 };
 

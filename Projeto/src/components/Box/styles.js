@@ -1,4 +1,6 @@
-.box__container {
+import styled from "styled-components";
+
+export const Container = styled.div`
   width: 100%;
   min-height: 120px;
   border: 1px solid #ccc;
@@ -7,9 +9,9 @@
   flex-direction: column;
   border-radius: 4px;
   width: 260px;
-}
+`;
 
-.box__title {
+export const Title = styled.h5`
   background: #e5e5e5;
   height: 35px;
   font-weight: 400;
@@ -18,12 +20,12 @@
   padding-left: 16px;
   font-size: 16px;
   border-radius: 4px 4px 0 0;
-}
+`;
 
-.box__content {
+export const Content = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+`;
