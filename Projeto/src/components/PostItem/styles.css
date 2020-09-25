@@ -1,0 +1,33 @@
+.post__container {
+  width: 100%;
+  min-height: 75px;
+  border: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 8px;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.post__container:hover {
+  border: 2px solid #aaa;
+}
+
+.post__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.post__details {
+  color: #666;
+
+  font-size: 14px;
+}
+
+.post__details span:nth-child(2) {
+  margin-left: 16px;
+}

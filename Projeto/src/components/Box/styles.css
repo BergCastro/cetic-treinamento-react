@@ -1,0 +1,29 @@
+.box__container {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 260px;
+}
+
+.box__title {
+  background: #e5e5e5;
+  height: 35px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  font-size: 16px;
+  border-radius: 4px 4px 0 0;
+}
+
+.box__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
