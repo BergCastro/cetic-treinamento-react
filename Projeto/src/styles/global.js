@@ -1,31 +1,25 @@
-:root {
-  --title-color: #322153;
-  --primary-color: #34cb79;
-  --text-color: #6c6c80;
-}
+import { createGlobalStyle } from "styled-components";
 
-* {
+export default createGlobalStyle`
+*{
   margin: 0;
   padding: 0;
+  outline: 0;
   box-sizing: border-box;
 }
-
-html {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  background: #fbfbfb;
+  body {
+    background: #fbfbfb;
   -webkit-font-smoothing: antialiased;
-  /* color: var(--text-color); */
 }
-
 body,
 input,
 button {
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+
 a {
   text-decoration: none;
 }
+
+`;

@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
-import RoundButton from "./components/RoundButton";
-
-import Home from "./pages/Home";
 
 import Routes from "./routes";
+
+import GlobalStyle from "./styles/global";
 
 function App() {
   return (
     <>
       <Routes />
+      <GlobalStyle />
     </>
   );
 }
