@@ -1,26 +1,15 @@
 import React from "react";
 
-import "./styles.css";
-
-// const styles = {
-//   container: {
-//     background: "#ddd",
-//   },
-// };
+import { Container, Input, Button } from "./styles";
 
 const InputSearch = ({ onChange, onClick }) => {
   return (
-    <div className="input__container">
-      <input
-        className="input__element"
-        type="text"
-        placeholder="Search for..."
-        onChange={onChange}
-      />
-      <button className="input__button" type="button" onChange={onClick}>
-        Ir!
-      </button>
-    </div>
+    <Container>
+      <Input type="text" placeholder="Pesquise..." onChange={onChange} />
+      <Button type="button" onChange={onClick}>
+        Ir
+      </Button>
+    </Container>
   );
 };
 

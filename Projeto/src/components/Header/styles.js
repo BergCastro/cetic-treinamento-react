@@ -1,4 +1,6 @@
-nav {
+import styled from "styled-components";
+
+export const NavBar = styled.nav`
   width: 100%;
   padding: 0 8%;
   height: 60px;
@@ -8,17 +10,19 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
+`;
 
-.header__title {
+export const HeaderTitle = styled.span`
   font-size: 20px;
   font-weight: 700;
-}
+`;
 
-.header__links a:nth-child(n + 2) {
-  margin-left: 16px;
-}
+export const Links = styled.div`
+  a + a {
+    margin-left: 16px;
+  }
 
-.header__links a {
-  color: #fff;
-}
+  a {
+    color: #fff;
+  }
+`;

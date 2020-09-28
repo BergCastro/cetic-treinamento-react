@@ -1,4 +1,6 @@
-.input__container {
+import styled from "styled-components";
+
+export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -6,25 +8,25 @@
   border-radius: 4px;
   background: #fff;
   height: 35px;
-}
+`;
 
-.input__element {
+export const Input = styled.input`
   width: 100%;
   padding: 4px 8px;
   border: none;
   font-size: 14px;
   font-weight: 400;
-}
 
-.input__element:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.input__element::placeholder {
-  color: #999;
-}
+  &::placeholder {
+    color: #999;
+  }
+`;
 
-.input__button {
+export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,8 +39,8 @@
   border-radius: 0 4px 4px 0;
 
   transition: color 0.2s;
-}
 
-.input__button:hover {
-  color: #fff;
-}
+  &:hover {
+    color: #fff;
+  }
+`;

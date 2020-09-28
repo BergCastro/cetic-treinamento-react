@@ -1,12 +1,8 @@
 import React from "react";
-import "./styles.css";
+import { Button } from "./styles";
 
 const RoundButton = ({ children, ...rest }) => {
-  return (
-    <button className="roundbutton" {...rest}>
-      {children}
-    </button>
-  );
+  return <Button {...rest}>{children}</Button>;
 };
 
 export default RoundButton;

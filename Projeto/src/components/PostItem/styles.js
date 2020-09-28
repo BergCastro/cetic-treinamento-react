@@ -1,4 +1,6 @@
-.post__container {
+import styled from "styled-components";
+
+export const Container = styled.div`
   width: 100%;
   min-height: 75px;
   border: 1px solid #ccc;
@@ -11,23 +13,23 @@
   margin-top: 8px;
   margin-bottom: 8px;
   cursor: pointer;
-}
 
-.post__container:hover {
-  border: 2px solid #aaa;
-}
+  &:hover {
+    border: 2px solid #aaa;
+  }
+`;
 
-.post__title {
+export const Title = styled.h2`
   font-size: 18px;
   font-weight: 700;
-}
+`;
 
-.post__details {
+export const Details = styled.div`
   color: #666;
 
   font-size: 14px;
-}
 
-.post__details span:nth-child(2) {
-  margin-left: 16px;
-}
+  span + span {
+    margin-left: 16px;
+  }
+`;

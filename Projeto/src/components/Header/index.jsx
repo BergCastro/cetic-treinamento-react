@@ -1,15 +1,17 @@
 import React from "react";
-import "./styles.css";
+import { Link } from "react-router-dom";
+
+import { NavBar, HeaderTitle, Links } from "./styles";
 
 const Header = () => {
   return (
-    <nav>
-      <span className="header__title">Blog Cetic</span>
-      <div className="header__links">
-        <a href="#">Home</a>
-        <a href="#">Sobre</a>
-      </div>
-    </nav>
+    <NavBar>
+      <HeaderTitle>Blog Cetic</HeaderTitle>
+      <Links>
+        <Link to="/">Home</Link>
+        <Link to="/sobre">Sobre</Link>
+      </Links>
+    </NavBar>
   );
 };
 
