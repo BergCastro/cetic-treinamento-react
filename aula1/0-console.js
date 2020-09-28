@@ -16,3 +16,4 @@ console.debug("Back to the outer level");
 console.time("answer time");
 console.log(`Hello world`);
 console.timeEnd("answer time");
+console.log("teste de branch");
