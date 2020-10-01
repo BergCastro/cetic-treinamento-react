@@ -70,8 +70,6 @@ const Home = () => {
           </Box>
         </Filters>
       </Container>
-
-      <RoundButton onClick={() => alert("Adicionar um post")}>+</RoundButton>
     </>
   );
 };

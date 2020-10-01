@@ -4,10 +4,11 @@ import Header from "./components/Header";
 import RoundButton from "./components/RoundButton";
 
 import Home from "./pages/Home";
+import Sobre from "./pages/Sobre";
 
-const Sobre = () => {
-  return <div>Sobre</div>;
-};
+// const Sobre = () => {
+//   return <div>Sobre</div>;
+// };
 
 const Routes = () => {
   return (
