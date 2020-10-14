@@ -3,7 +3,13 @@ import ReactModal from 'react-modal';
 import { FaTimes } from 'react-icons/fa';
 import { Container, ModalContent, ModalHeader } from './styles';
 
-
+// interface IModalProps {
+//   isOpen: boolean;
+//   title: string;
+//   handleCloseModal(): void;
+//   width: number;
+//   height: number;
+// }
 
 const customStyles = {
   content: {

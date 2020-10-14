@@ -17,13 +17,16 @@ export const ModalHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
   border-bottom-color: #ddd;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+
   div {
     font-size: 20px;
     font-weight: 500;
   }
+
   button {
     background: none;
     border: none;
@@ -46,6 +49,7 @@ export const ModalFooter = styled.div`
   height: 30px;
   margin-top: auto;
   justify-content: space-around;
+
   /* padding: 8px 24px; */
   align-items: flex-end;
 `;

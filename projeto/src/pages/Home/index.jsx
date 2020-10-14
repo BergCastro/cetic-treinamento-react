@@ -3,6 +3,8 @@ import Box from "../../components/Box";
 import PostItem from "../../components/PostItem";
 import RoundButton from "../../components/RoundButton";
 import InputSearch from "../../components/InputSearch";
+import Modal from '../../components/Modal';
+
 import api from "../../services/api";
 import { Container, Posts, Filters } from "./styles";
 
@@ -33,7 +35,7 @@ const Home = () => {
               key={index}
               title={post.title}
               author={post.author}
-              datePost={post.datePost}
+              datePost={new Date(post.datePost).toLocaleDateString('pt-br')}
             />
           ))}
         </Posts>
@@ -56,6 +58,9 @@ const Home = () => {
           </Box>
         </Filters>
       </Container>
+      <RoundButton onClick={() => alert("Adicionar um post")}>+</RoundButton>
+      {/* <Modal isOpen={} handleCloseModal={}/>
+       */}
     </>
   );
 };
