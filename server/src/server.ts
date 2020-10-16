@@ -4,21 +4,25 @@ export const posts = [
     "title": "post1",
     "author": "typicode",
     "datePost": "2020-10-01",
-    "body": "sdfsdfsdfsdf"
+    "body": "sdfsdfsdfsdf jhgjh hjgkgdfsd sdfsf sdf sd fsd f sfs df sd fsdfsdfsdfsdf",
+    "category": "javascript"
+
   },
   {
     "id": 2,
     "title": "post2",
     "author": "typicode",
     "datePost": "2020-10-01",
-    "body": "sdfsdfsdfsdf"
+    "body": "sdfsdfsdfsdf",
+    "category": "javascript"
   },
   {
     "id": 3,
     "title": "post3",
     "author": "typicode",
     "datePost": "2020-10-01",
-    "body": "sdfsdfsdfsdf"
+    "body": "sdfsdfsdfsdf",
+    "category": "javascript"
   }
 ]
 

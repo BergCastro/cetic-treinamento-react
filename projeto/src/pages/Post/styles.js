@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const Body = styled.div`
   width: 100%;
   color: #333;
-  line-height: 8px;
+  line-height: 18px;
   margin-top: 16px;
 `;
 

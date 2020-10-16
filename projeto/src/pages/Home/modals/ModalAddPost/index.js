@@ -58,7 +58,7 @@ const ModalAddPost = ({
       {errors.body && <span>Este campo é requerido</span>}
 
       <label htmlFor="category">Categoria</label>
-      <select name="category" >
+      <select name="category" ref={register}>
         {categories && categories.map((category, index) => (
           <option key={index} value={category}>{category}</option>
 

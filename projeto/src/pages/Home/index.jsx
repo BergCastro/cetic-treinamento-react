@@ -11,8 +11,9 @@ import api from "../../services/api";
 import { Container, Posts, Filters } from "./styles";
 
 const Home = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [posts, setPosts] = useState([]);
+  
   const [showModalAddPost, setShowModalAddPost] = useState(false);
 
   
@@ -24,6 +25,7 @@ const Home = () => {
       const { data } = await api.get("/posts");
 
       setPosts(data);
+
     }
 
     loadPosts();
@@ -38,7 +40,9 @@ const Home = () => {
     <>
       <Container>
         <Posts>
-          <h2>Posts</h2>
+         
+            <h2>Posts</h2>
+
           <hr />
 
           {posts.map((post, index) => (
@@ -51,7 +55,7 @@ const Home = () => {
               datePost={new Date(post.datePost).toLocaleDateString('pt-br')}
               
               />
-              </Link>
+            </Link>
           ))}
         </Posts>
 
@@ -82,8 +86,6 @@ const Home = () => {
       posts={posts}
       />
 
-      
-      
     </>
   );
 };

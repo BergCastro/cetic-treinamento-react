@@ -8,7 +8,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.span`
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
   color: #333;
 
 `;

@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Param, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 
 import { posts, comments } from './server'
@@ -8,6 +8,7 @@ interface CreatePostDto {
   author: string; 
   datePost: string; 
   body: string;
+  category: string;
 
 }
 
@@ -23,6 +24,15 @@ export class AppController {
   @Get('posts')
   findPosts(): any {
     return posts;
+  }
+
+  @Get('posts/:id')
+  showPost(@Param('id')  id): any {
+    
+    const post = posts.find(post => post.id === Number(id))
+   
+
+    return post;
   }
 
   @Post('posts')
