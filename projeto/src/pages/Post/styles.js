@@ -7,8 +7,19 @@ export const Container = styled.div`
   flex-direction: row;
 `;
 
-export const Posts = styled.div`
+
+export const Content = styled.div`
   width: 100%;
+  
+`;
+
+
+
+export const Body = styled.div`
+  width: 100%;
+  color: #333;
+  line-height: 8px;
+  margin-top: 16px;
 `;
 
 export const Filters = styled.div`

@@ -1,35 +1,33 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom'
 import Box from "../../components/Box";
-import PostItem from "../../components/PostItem";
 import RoundButton from "../../components/RoundButton";
 import InputSearch from "../../components/InputSearch";
-import ModalAddPost from './modals/ModalAddPost';
 import ModalAddComment from './modals/ModalAddComment';
-
 import api from "../../services/api";
-import { Container, Posts, Filters } from "./styles";
+import Header from './Header';
+import { Container, Filters, Content, Body } from "./styles";
 
-const Home = () => {
-  const [posts, setPosts] = useState([]);
-  const [showModalAddPost, setShowModalAddPost] = useState(false);
+const Post = () => {
+  const { id } = useParams()
+  const [post, setPost] = useState();
+  const [comments, setComments] = useState();
+  
   const [showModalAddComment, setShowModalAddComment] = useState(false);
   
 
   const categories = ["HTML", "Jabascript", "CSS", "React"];
 
   useEffect(() => {
-    async function loadPosts() {
-      const { data } = await api.get("/posts");
-
-      setPosts(data);
+    async function loadPost() {
+      const { data } = await api.get(`/posts/${id}`);
+      setPost(data);
+      
     }
 
-    loadPosts();
-  }, []);
+    loadPost();
+  }, [id]);
 
-  const handleCloseModalAddPost = () => {
-    setShowModalAddPost(false)
-  }
 
   const handleCloseModalAddComment = () => {
     setShowModalAddComment(false)
@@ -37,20 +35,19 @@ const Home = () => {
 
   return (
     <>
-      <Container>
-        <Posts>
-          <h2>Posts</h2>
-          <hr />
+      {post && (
+        <Container>
+          <Content>
+            <Header post={post}/>
+            <Body>
+              <p>
 
-          {posts.map((post, index) => (
-            <PostItem
-              key={index}
-              title={post.title}
-              author={post.author}
-              datePost={new Date(post.datePost).toLocaleDateString('pt-br')}
-            />
-          ))}
-        </Posts>
+              {post.body}
+              </p>
+
+            </Body>
+
+          </Content>
 
         <Filters>
           <Box title="Pesquisar">
@@ -70,24 +67,18 @@ const Home = () => {
           </Box>
         </Filters>
       </Container>
-      <RoundButton onClick={() => setShowModalAddPost(true)}>+</RoundButton>
-      <ModalAddPost 
-      isOpen={showModalAddPost} 
-      handleCloseModal={handleCloseModalAddPost} 
+      )}
       
-      setPosts={setPosts}
-      posts={posts}
-      />
-
+      
       <ModalAddComment
       isOpen={showModalAddComment} 
       handleCloseModal={handleCloseModalAddComment}  
-      setPosts={setPosts}
-      posts={posts}
+      setComments={setComments}
+      comments={comments}
       />
       
     </>
   );
 };
 
-export default Home;
+export default Post;

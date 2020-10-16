@@ -39,7 +39,7 @@ const ModalAddPost = ({
     
     >
 
-  <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
       
       <label htmlFor="title">Título</label>
       <input name="title"  ref={register({ required: { message: "Este campo é requerido" , value: true} })} />      
@@ -47,7 +47,7 @@ const ModalAddPost = ({
      
       <label htmlFor="author">Autor</label>
       <input name="author" ref={register({ required: true })} />
-  {errors.author && <span>Este campo é requerido</span>}
+      {errors.author && <span>Este campo é requerido</span>}
       
       <label htmlFor="datePost">Data do Post</label>
       <input name="datePost" ref={register({ required: true })} />
@@ -59,8 +59,8 @@ const ModalAddPost = ({
 
       <label htmlFor="category">Categoria</label>
       <select name="category" >
-        {categories && categories.map((category) => (
-          <option value={category}>{category}</option>
+        {categories && categories.map((category, index) => (
+          <option key={index} value={category}>{category}</option>
 
         ))}
       </select>
@@ -68,7 +68,7 @@ const ModalAddPost = ({
       
       
       <button type="submit">SALVAR</button>
-  </Form>
+    </Form>
 
 
 

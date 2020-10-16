@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory, Link } from 'react-router-dom';
 import Box from "../../components/Box";
 import PostItem from "../../components/PostItem";
 import RoundButton from "../../components/RoundButton";
@@ -10,6 +11,7 @@ import api from "../../services/api";
 import { Container, Posts, Filters } from "./styles";
 
 const Home = () => {
+  const history = useHistory();
   const [posts, setPosts] = useState([]);
   const [showModalAddPost, setShowModalAddPost] = useState(false);
 
@@ -40,12 +42,16 @@ const Home = () => {
           <hr />
 
           {posts.map((post, index) => (
+            <Link to={`posts/${post.id}`} key={index}>
+            
             <PostItem
-              key={index}
+              
               title={post.title}
               author={post.author}
               datePost={new Date(post.datePost).toLocaleDateString('pt-br')}
-            />
+              
+              />
+              </Link>
           ))}
         </Posts>
 
