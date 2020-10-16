@@ -4,7 +4,7 @@ import PostItem from "../../components/PostItem";
 import RoundButton from "../../components/RoundButton";
 import InputSearch from "../../components/InputSearch";
 import ModalAddPost from './modals/ModalAddPost';
-
+import ModalAddComment from './modals/ModalAddComment';
 
 import api from "../../services/api";
 import { Container, Posts, Filters } from "./styles";
@@ -12,10 +12,10 @@ import { Container, Posts, Filters } from "./styles";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [showModalAddPost, setShowModalAddPost] = useState(false);
-
+  const [showModalAddComment, setShowModalAddComment] = useState(false);
   
 
-  const categories = ["httm", "javascript", "css", "react"];
+  const categories = ["HTML", "Jabascript", "CSS", "React"];
 
   useEffect(() => {
     async function loadPosts() {
@@ -31,6 +31,9 @@ const Home = () => {
     setShowModalAddPost(false)
   }
 
+  const handleCloseModalAddComment = () => {
+    setShowModalAddComment(false)
+  }
 
   return (
     <>
@@ -71,12 +74,17 @@ const Home = () => {
       <ModalAddPost 
       isOpen={showModalAddPost} 
       handleCloseModal={handleCloseModalAddPost} 
-      categories={categories}
+      
       setPosts={setPosts}
       posts={posts}
       />
 
-      
+      <ModalAddComment
+      isOpen={showModalAddComment} 
+      handleCloseModal={handleCloseModalAddComment}  
+      setPosts={setPosts}
+      posts={posts}
+      />
       
     </>
   );
